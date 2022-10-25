@@ -2,36 +2,50 @@
 
 class TaskProvider
 {
-    private array $tasks;
+    private PDO $pdo;
 
-    public function __construct()
+    public function __construct(PDO $pdo)
     {
-        $this->tasks = $_SESSION['tasks'] ?? [];
+        $this->pdo = $pdo;
     }
 
-    /**
-     * @return array
-     * Выводит список не законченный задач!
-     */
+    // Выводит список не законченных задач из БД!
     public function getUndoneList(): array
     {
-        /**
-         * @var Task $task
-         */
-        $tasks = [];
-        foreach ($this->tasks as $task) {
-            if (!$task->isDone()) {
-                $tasks[] = $task;
-            }
-        }
-        return $tasks;
+        $statement = $this->pdo->prepare(
+            'SELECT * FROM tasks WHERE isDone = 0 AND user_id = :id'
+        );
+
+        $statement->execute([
+            'id' => $_SESSION['user_id'],
+        ]);
+
+        return $statement->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, Task::class);
     }
 
-    // Добавляет Задачи в список
-    public function addTask(Task $task): void
+    // Метод делающий задачу выполненной.
+    public function doDoneTask(int $id): bool
     {
-        $_SESSION['tasks'][] = $task;
-        $this->tasks[] = $task;
+        $statement = $this->pdo->prepare(
+            'UPDATE tasks SET isDone = 1 WHERE id = :id AND user_id = :user_id'
+        );
+        return $statement->execute([
+            'user_id' => $_SESSION['user_id'],
+            'id' => $id,
+        ]);
+    }
+
+    // Добавляет Задачи в БД.
+    public function addTask(Task $task): bool
+    {
+        $statement = $this->pdo->prepare(
+            'INSERT INTO tasks (user_id, description) VALUES (:user_id, :description)'
+        );
+
+        return $statement->execute([
+            'user_id' => $_SESSION['user_id'],
+            'description' => $task->getDescription()
+        ]);
     }
 
 }

@@ -1,8 +1,5 @@
 <?php
 require_once 'model/User.php';
-/**
- * @var User $username
- */
 
 session_start();
 

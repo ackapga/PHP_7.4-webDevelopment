@@ -1,20 +1,18 @@
 <?php
 
-
 class User
 {
+    private int $id;
     private string $username;
+    private string $name;
     private ?string $email;
     private ?int $age;
-    private bool $isActive = true;
-    private DateTime $dateCreated;
 
     public function __construct(string $username)
     {
         $this->username = $username;
-        $this->dateCreated = new DateTime();
     }
-
+// Метод фильтра возраста, и используется setAge()
     private function setValidAge(?int $age): ?int
     {
         if ($age > 0 && $age <= 125) {
@@ -24,11 +22,27 @@ class User
     }
 
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
      * @return string
      */
     public function getUsername(): string
     {
         return $this->username;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     /**
@@ -48,19 +62,27 @@ class User
     }
 
     /**
-     * @return bool
+     * @param int $id
      */
-    public function isActive(): bool
+    public function setId(int $id): void
     {
-        return $this->isActive;
+        $this->id = $id;
     }
 
     /**
-     * @return DateTime
+     * @param string $username
      */
-    public function getDateCreated(): DateTime
+    public function setUsername(string $username): void
     {
-        return $this->dateCreated;
+        $this->username = $username;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
     }
 
     /**
@@ -77,14 +99,6 @@ class User
     public function setAge(?int $age): void
     {
         $this->age = $this->setValidAge($age);
-    }
-
-    /**
-     * @param bool $isActive
-     */
-    public function setIsActive(bool $isActive): void
-    {
-        $this->isActive = $isActive;
     }
 
 }

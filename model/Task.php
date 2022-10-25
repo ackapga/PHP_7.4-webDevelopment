@@ -2,15 +2,16 @@
 
 class Task
 {
+    private int $id;
     private string $description;
+    private bool $isDone;
     private DateTime $dateCreated;
     private DateTime $dateUpdated;
     private DateTime $dateDone;
-    private bool $isDone;
     private User $user;
-    private Array $comments = [];
+    private array $comments = [];
 
-    public function __construct(string $description, $isDone = false)
+    public function __construct(string $description = '', bool $isDone = false)
     {
         $this->description = $description;
         $this->isDone = $isDone;
@@ -21,36 +22,38 @@ class Task
         $this->setDateUpdated(new DateTime);
         $this->setDateDone(new DateTime);
         $this->setIsDone(true);
-
     }
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
     public function getDescription(): string
     {
         return $this->description;
     }
 
     /**
-     * @return DateTime
+     * @param string $description
      */
-    public function getDateCreated(): DateTime
+    public function setDescription(string $description): void
     {
-        return $this->dateCreated;
-    }
-
-    /**
-     * @return DateTime
-     */
-    public function getDateUpdated(): DateTime
-    {
-        return $this->dateUpdated;
-    }
-
-    /**
-     * @return DateTime
-     */
-    public function getDateDone(): DateTime
-    {
-        return $this->dateDone;
+        $this->description = $description;
     }
 
     /**
@@ -62,28 +65,19 @@ class Task
     }
 
     /**
-     * @return User
+     * @param bool $isDone
      */
-    public function getUser(): User
+    public function setIsDone(bool $isDone): void
     {
-        return $this->user;
+        $this->isDone = $isDone;
     }
 
     /**
-     * @return array
+     * @return DateTime
      */
-    public function getComments(): array
+    public function getDateCreated(): DateTime
     {
-        return $this->comments;
-    }
-
-    /**
-     * @param string $description
-     */
-    public function setDescription(string $description): void
-    {
-        $this->setDateUpdated(new DateTime);
-        $this->description = $description;
+        return $this->dateCreated;
     }
 
     /**
@@ -95,11 +89,27 @@ class Task
     }
 
     /**
+     * @return DateTime
+     */
+    public function getDateUpdated(): DateTime
+    {
+        return $this->dateUpdated;
+    }
+
+    /**
      * @param DateTime $dateUpdated
      */
     public function setDateUpdated(DateTime $dateUpdated): void
     {
         $this->dateUpdated = $dateUpdated;
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function getDateDone(): DateTime
+    {
+        return $this->dateDone;
     }
 
     /**
@@ -111,11 +121,11 @@ class Task
     }
 
     /**
-     * @param bool $isDone
+     * @return User
      */
-    public function setIsDone(bool $isDone): void
+    public function getUser(): User
     {
-        $this->isDone = $isDone;
+        return $this->user;
     }
 
     /**
@@ -127,11 +137,19 @@ class Task
     }
 
     /**
-     * @param Comment $comment
+     * @return array
      */
-    public function setComment(Comment $comment): void
+    public function getComments(): array
     {
-        $this->comments[] = $comment;
+        return $this->comments;
+    }
+
+    /**
+     * @param array $comments
+     */
+    public function setComments(array $comments): void
+    {
+        $this->comments = $comments;
     }
 
 }
