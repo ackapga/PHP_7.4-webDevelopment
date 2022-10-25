@@ -4,17 +4,14 @@
 class User
 {
     private string $username;
-    private string $email;
-    private ?string $sex;
+    private ?string $email;
     private ?int $age;
     private bool $isActive = true;
     private DateTime $dateCreated;
 
-    public function __construct(string $username, string $email, ?int $age = null)
+    public function __construct(string $username)
     {
         $this->username = $username;
-        $this->email = $email;
-        $this->age = $this->setValidAge($age);
         $this->dateCreated = new DateTime();
     }
 
@@ -35,19 +32,11 @@ class User
     }
 
     /**
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    /**
      * @return string|null
      */
-    public function getSex(): ?string
+    public function getEmail(): ?string
     {
-        return $this->sex;
+        return $this->email;
     }
 
     /**
@@ -74,7 +63,29 @@ class User
         return $this->dateCreated;
     }
 
+    /**
+     * @param string|null $email
+     */
+    public function setEmail(?string $email): void
+    {
+        $this->email = $email;
+    }
 
+    /**
+     * @param int|null $age
+     */
+    public function setAge(?int $age): void
+    {
+        $this->age = $this->setValidAge($age);
+    }
+
+    /**
+     * @param bool $isActive
+     */
+    public function setIsActive(bool $isActive): void
+    {
+        $this->isActive = $isActive;
+    }
 
 }
 
