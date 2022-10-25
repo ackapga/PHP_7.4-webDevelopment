@@ -6,15 +6,14 @@ class Task
     private DateTime $dateCreated;
     private DateTime $dateUpdated;
     private DateTime $dateDone;
-    private int $priority = 1;
-    private bool $isDone = false;
+    private bool $isDone;
     private User $user;
     private Array $comments = [];
 
-    public function __construct(User $user)
+    public function __construct(string $description, $isDone = false)
     {
-        $this->user = $user;
-        $this->setDateCreated(new DateTime());
+        $this->description = $description;
+        $this->isDone = $isDone;
     }
 
     public function markAsDone(): void
@@ -24,7 +23,6 @@ class Task
         $this->setIsDone(true);
 
     }
-
 
     public function getDescription(): string
     {
@@ -53,14 +51,6 @@ class Task
     public function getDateDone(): DateTime
     {
         return $this->dateDone;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPriority(): int
-    {
-        return $this->priority;
     }
 
     /**
@@ -121,14 +111,6 @@ class Task
     }
 
     /**
-     * @param int $priority
-     */
-    public function setPriority(int $priority): void
-    {
-        $this->priority = $priority;
-    }
-
-    /**
      * @param bool $isDone
      */
     public function setIsDone(bool $isDone): void
@@ -151,6 +133,5 @@ class Task
     {
         $this->comments[] = $comment;
     }
-
 
 }
