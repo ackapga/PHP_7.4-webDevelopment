@@ -1,9 +1,15 @@
 <?php
-require_once "model/User.php";
-require_once "model/UserProvider.php";
+require_once 'model/User.php';
+require_once 'model/UserProvider.php';
+
 $pdo = require 'db.php';
 
 session_start();
+
+// Не допускает Авторизованного пользователя на страницу регистраций.
+if (isset($_SESSION['username'])) {
+    header('Location: /');
+}
 
 if (isset($_POST['reg_name']) && isset($_POST['reg_username']) && isset($_POST['reg_password'])) {
     ['reg_name' => $reg_name, 'reg_username' => $reg_username, 'reg_password' => $reg_password] = $_POST;
@@ -20,4 +26,4 @@ if (isset($_POST['reg_name']) && isset($_POST['reg_username']) && isset($_POST['
     die();
 }
 
-require_once 'view/registration.php';
+include "view/registration.php";

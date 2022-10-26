@@ -17,8 +17,8 @@
 <?php else: ?>
 
     <h2> Добро пожаловать <?= $username ?></h2>
-    <h2><a href="/?controller=tasks">Задачи</a></h2>
-    <h3><a href="/?controller=security&action=logout">Выйти</a></h3>
+    <h2><a href="/?controller=tasks">&#127764; Задачи</a></h2>
+    <h3><a href="/?controller=security&action=logout">&#x25C4;  Выйти из профиля</a></h3>
 
 <?php endif; ?>
 </body>

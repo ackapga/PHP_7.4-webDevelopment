@@ -18,4 +18,3 @@ $pdo->exec('CREATE TABLE tasks (
     description VARCHAR (150),
     isDone      TINYINT       DEFAULT (0) 
 );');
-
