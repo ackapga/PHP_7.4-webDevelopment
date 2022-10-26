@@ -1,7 +1,5 @@
 <?php
 
-require_once "User.php";
-
 class UserProvider
 {
     private PDO $pdo;

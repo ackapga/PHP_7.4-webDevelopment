@@ -6,14 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="50556507-7fe7-49b2-80e5-ad170016f3f5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contoller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/contoller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contoller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/contoller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contoller/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/contoller/TasksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ackapgaDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/ackapgaDB.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contoller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contoller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contoller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contoller/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/TasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture.php" beforeDir="false" afterPath="$PROJECT_DIR$/fixture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/TaskProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/TaskProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/UserProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/UserProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/signin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tasks.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +30,13 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="http://localhost/" id="8f0800f6-f3cc-418a-9fb3-120d2c1935dd" name="localhost" />
+      <server host="localhost" id="f8e39e51-1304-4cd8-b40e-cfdcdde7deef" name="localhost (1)" />
+    </servers>
   </component>
   <component name="ProjectId" id="2GdoCyqf6MAe9wqKjcMYkCJ6Hl6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,7 +56,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="localhost" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="localhost" session_id="PHPSTORM">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -59,7 +73,9 @@
       <option name="presentableId" value="Default" />
       <updated>1666727701517</updated>
       <workItem from="1666727704151" duration="15000" />
-      <workItem from="1666727721892" duration="2556000" />
+      <workItem from="1666727721892" duration="3181000" />
+      <workItem from="1666783140115" duration="1854000" />
+      <workItem from="1666796693386" duration="10758000" />
     </task>
     <servers />
   </component>

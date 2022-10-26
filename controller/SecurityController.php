@@ -1,4 +1,5 @@
 <?php
+require_once 'model/User.php';
 require_once 'model/UserProvider.php';
 
 $pdo = require 'db.php';
@@ -6,6 +7,11 @@ $pdo = require 'db.php';
 session_start();
 
 $error = null;
+
+// Не допускает Авторизованного пользователя на страницу Авторизаций.
+if (isset($_SESSION['username'])) {
+    header('Location: /');
+}
 
 //   Проверяет Логин и Пароль
 if (isset($_POST['username'], $_POST['password'])) {
@@ -16,7 +22,7 @@ if (isset($_POST['username'], $_POST['password'])) {
     $user = $userProvider->getByUsernameAndPassword($username, $password);
 
     if ($user === null) {
-        $error = 'Пользователь с указанными учетными данными не найден';
+        $error = 'Пользователь с таким именем не найден или пароль не верный!';
     } else {
         $_SESSION['username'] = $user;
         $_SESSION['user_id'] = $user->getId();
