@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50556507-7fe7-49b2-80e5-ad170016f3f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Logger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/errorHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/805b8fd8-d93e-4715-a299-1a131333e526.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/805b8fd8-d93e-4715-a299-1a131333e526.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ackapgaDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/ackapgaDB.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contoller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contoller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contoller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contoller/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/TasksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture.php" beforeDir="false" afterPath="$PROJECT_DIR$/fixture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/TaskProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/TaskProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/TasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/UserProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/UserProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tasks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,8 +52,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -75,7 +84,9 @@
       <workItem from="1666727704151" duration="15000" />
       <workItem from="1666727721892" duration="3181000" />
       <workItem from="1666783140115" duration="1854000" />
-      <workItem from="1666796693386" duration="10758000" />
+      <workItem from="1666796693386" duration="15085000" />
+      <workItem from="1666891498246" duration="11142000" />
+      <workItem from="1666902753672" duration="417000" />
     </task>
     <servers />
   </component>

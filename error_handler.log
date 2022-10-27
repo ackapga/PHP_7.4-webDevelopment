@@ -1,0 +1,12 @@
+2022-10-27 20:15:05 - error_handler: Undefined constant "asd"
+2022-10-27 20:16:29 - error_handler: syntax error, unexpected double-quoted string "view/index.php"
+2022-10-27 20:16:29 - error_handler: syntax error, unexpected double-quoted string "view/index.php"
+2022-10-27 20:34:50 - error_handler: Failed opening required '' (include_path='.;C:\php\pear')
+2022-10-27 20:34:50 - error_handler: Failed opening required '' (include_path='.;C:\php\pear')
+2022-10-27 20:35:25 - error_handler: syntax error, unexpected single-quoted string "model/User.php"
+2022-10-27 20:35:26 - error_handler: syntax error, unexpected single-quoted string "model/User.php"
+2022-10-27 20:35:42 - error_handler: syntax error, unexpected identifier "de"
+2022-10-27 20:35:42 - error_handler: syntax error, unexpected identifier "de"
+2022-10-27 20:38:28 - error_handler: syntax error, unexpected identifier "de"
+2022-10-27 20:38:28 - error_handler: syntax error, unexpected identifier "de"
+2022-10-27 20:38:46 - error_handler: Undefined constant "qwe"
