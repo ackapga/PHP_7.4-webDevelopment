@@ -23,6 +23,14 @@ $taskProvider = new TaskProvider($pdo);
 
 // Функция для добавления Задач!
 if (isset($_GET['action']) && $_GET['action'] === 'add') {
+    try {
+        if (empty($_POST['task'])) {
+            throw new Exception('Нет задачи!');
+        }
+    } catch (Exception $exception) {
+        echo $exception->getMessage();
+        die();
+    }
     $taskProvider->addTask(new Task($_POST['task']));
     header("Location: /?controller=tasks");
     die();

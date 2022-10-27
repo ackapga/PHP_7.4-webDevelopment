@@ -1398,9 +1398,19 @@
       <DataType>INTEGER|0s</DataType>
       <Position>6</Position>
     </column>
-    <key id="504" parent="485">
+    <index id="504" parent="485" name="sqlite_autoindex_users_1">
+      <ColNames>username</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="505" parent="485">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="506" parent="485">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_users_1</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

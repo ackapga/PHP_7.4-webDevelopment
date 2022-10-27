@@ -8,8 +8,12 @@ class UserProvider
     {
         $this->pdo = $pdo;
     }
-    // Метод отправки данных пользователя в БД.
-    // Используется md5() для хеширования Пароля!
+
+    /**
+     * @param User $user
+     * @param string $plainPassword
+     * @return bool
+     */
     public function registerUser(User $user, string $plainPassword): bool
     {
         $statement = $this->pdo->prepare(

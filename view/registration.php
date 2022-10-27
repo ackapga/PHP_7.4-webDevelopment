@@ -27,6 +27,9 @@
     <div class="row">
         <h4 class="text-center">Страница регистрации нового пользователя.</h4>
         <form method="post" class="sign-in-form mt-5 mt-md-5 col-lg-4 col-md-5 col-sm-8">
+            <div class="alert alert-danger <?=$error === null ? 'visually-hidden' : ''?>">
+                <?=$error?>
+            </div>
             <label for="reg_name">Введите ваше имя</label>
             <input type="text" id="reg_name" name="reg_name" class="form-control mb-3" placeholder="Ваше имя" required="" autofocus="">
             <label for="reg_username">Придумайте имя пользователя</label>
